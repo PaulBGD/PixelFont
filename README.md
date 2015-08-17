@@ -1,12 +1,12 @@
 I'm currently in the middle of creating my entry for [js13kGames](http://2015.js13kgames.com/). js13kGames is a contest, where the rules are that you create a game using JavaScript and Canvas, while keeping it under 13 kilobytes. This includes all assets as well. While we are supposed to zip our entry, this is a huge limit. For example, here's a comparison between a few popular libraries:
 
-![Size of libraries vs js13kGames](/content/images/2015/08/blank-2.png)
+![Size of libraries vs js13kGames](/content/images/blank-2.png)
 
 EaselJS and melonjs are both 2D frameworks for making games in Canvas. They're both far larger than 13KB, and there's no way I can fit them into my game.
 
 I can't use Fonts either, Open Sans Normal when GZipped is 15.2KB! So when I'm working on my game, Gray, I realized I needed a way to add a font that really fits the game. I then decided to make the game's art style Pixel Art (after being inspired by /r/pixelart), and figure out a way to create a lightweight font. That part was pretty easy actually, because I figured out the perfect way to do it immediately.
 
-![A Pixel](/content/images/2015/08/A-pixel.png)
+![A Pixel](/content/images/A-pixel.png)
 
 So the idea was, I create an Object that contains 5 arrays for each letter. One array for each row. The arrays would then contain values of true and false. Where there was a true, I would draw a pixel. Where there was a false, I would skip that spot. The A arrays came out like this:
 
